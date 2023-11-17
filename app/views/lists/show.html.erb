@@ -1,0 +1,10 @@
+<h1>list detaiils</h1>
+<p><strong>Name:</strong> <%=@list.name%></p>
+<h2>Bookmarks:</h2>
+<ul>
+  <% @list.bookmarks.each do |bookmark| %>
+    <li><%= bookmark.movie.title %></li>
+    <!-- Assuming 'movie' is an association on the Bookmark model -->
+    <!-- Adjust the attribute names based on your actual model structure -->
+  <% end %>
+</ul>
